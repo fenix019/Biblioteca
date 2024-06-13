@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Libros - Biblioteca Virtual</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./css/libros.css">
+</head>
+<body>
+
+    <div class="d-flex flex-column min-vh-100">
+    
+        <!-- heder -->
+        <header class="bg-light py-3">
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <h1 class="text-center">Biblioteca Virtual</h1>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- nav mamalon -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="index.html">
+                <img src="logo.png" alt="Logo" style="width: 40px;">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="./index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./iniciosecion.html">Inicio Secion</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./registro.html">Registro</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="reglamento.html">Reglamento</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <div class="container mt-3">
+            <div class="row">
+                <div class="col-md-12">
+                    <form class="form-inline">
+                        <input class="form-control mr-sm-2 flex-grow-1" type="search" placeholder="Buscar libros" aria-label="Buscar">
+                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- contenido punto eme pe kuatro -->
+        <main class="container mt-4 flex-fill">
+            <div class="row">
+                <!-- FILTROS -->
+                <div class="col-md-3">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Filtros</h5>
+                            <form>
+                                <div class="form-group">
+                                    <label for="filter-author">Ordenar por Autor</label>
+                                    <select class="form-control" id="filter-author">
+                                        <option>A - Z</option>
+                                        <option>Z - A</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="filter-category">Categoría</label>
+                                    <select class="form-control" id="filter-category">
+                                        <option>Ficción</option>
+                                        <option>No Ficción</option>
+                                        <option>Biografía</option>
+                                        <option>Infantil</option>
+                                        <option>Misterio</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="filter-year">Año de Publicación</label>
+                                    <select class="form-control" id="filter-year">
+                                        <option>Más recientes primero</option>
+                                        <option>Más antiguos primero</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="filter-rating">Calificación</label>
+                                    <select class="form-control" id="filter-rating">
+                                        <option>Más alto primero</option>
+                                        <option>Más bajo primero</option>
+                                    </select>
+                                </div>
+                                <button type="submit" class="btn btn-primary btn-block">Aplicar Filtros</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- es un grid man -->
+                <div class="col-md-9">
+                    <div class="row">
+                        <!-- a qui empiezan los divs de los libros -->
+                        <div class="col-md-3 mb-4">
+                            <div class="card book-card">
+                                <img src="book1.jpg" class="card-img-top" alt="Título del libro">
+                                <div class="card-body">
+                                    <h5 class="card-title">Título del Libro 1</h5>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- contenedor de cada libro -->
+                        <div class="col-md-3 mb-4">
+                            <div class="card book-card">
+                                <img src="book2.jpg" class="card-img-top" alt="Título del libro">
+                                <div class="card-body">
+                                    <h5 class="card-title">Título del Libro 2</h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 mb-4">
+                            <div class="card book-card">
+                                <img src="book3.jpg" class="card-img-top" alt="Título del libro">
+                                <div class="card-body">
+                                    <h5 class="card-title">Título del Libro 3</h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 mb-4">
+                            <div class="card book-card">
+                                <img src="book4.jpg" class="card-img-top" alt="Título del libro">
+                                <div class="card-body">
+                                    <h5 class="card-title">Título del Libro 4</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- totermamalon -->
+        <footer class="footer mt-auto py-3 bg-light">
+            <div class="container">
+                <p class="text-center">&copy; 2024 Biblioteca Virtual. Todos los derechos reservados.</p>
+            </div>
+        </footer>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
