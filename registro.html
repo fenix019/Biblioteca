@@ -6,13 +6,14 @@
     <title>Registro - Biblioteca Virtual</title>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="./css/registro.css">
+
 </head>
 <body>
 
     <div class="d-flex flex-column min-vh-100">
     
         <!-- header -->
-        <header class="bg-light py-3">
+        <header class="header py-3">
             <div class="container">
                 <div class="row">
                     <div class="col">
@@ -22,8 +23,8 @@
             </div>
         </header>
 
-        <!-- nab -->
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <!-- nav -->
+        <nav class="navbar navbar-expand-lg navbar-light">
             <a class="navbar-brand" href="index.html">
                 <img src="logo.png" alt="Logo" style="width: 40px;">
             </a>
@@ -36,7 +37,7 @@
                         <a class="nav-link" href="./index.html">Inicio</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="./iniciosecion.html">Inicio Secion</a>
+                        <a class="nav-link" href="./iniciosecion.html">Inicio Sesión</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="libros.html">Libros</a>
@@ -48,14 +49,14 @@
             </div>
         </nav>
 
-        <!-- conenido -->
+        <!-- contenido -->
         <main class="container mt-5 flex-fill">
             <div class="row justify-content-center">
                 <div class="col-md-8">
                     <div class="card">
                         <div class="card-body">
                             <h3 class="card-title text-center">Registro</h3>
-                            <form>
+                            <form id="registroForm">
                                 <div class="form-row">
                                     <div class="form-group col-md-6">
                                         <label for="username">Usuario</label>
@@ -63,7 +64,7 @@
                                     </div>
                                     <div class="form-group col-md-6">
                                         <label for="name">Nombre</label>
-                                        <input type="text" class="form-control" id="name" placeholder="Ingrese su nombre">
+                                        <input type="text" class="form-control" id="name" name="name" placeholder="Ingrese su nombre">
                                     </div>
                                 </div>
                                 <div class="form-row">
@@ -90,7 +91,7 @@
                                         <input type="password" class="form-control" id="password2" placeholder="Repita su contraseña">
                                     </div>
                                 </div>
-                                <button type="submit" class="btn btn-primary btn-block">Registrarse</button>
+                                <button type="submit" class="btn btn-primary btn-block" onclick="enviarCorreo()">Registrarse</button>
                             </form>
                         </div>
                     </div>
@@ -98,14 +99,15 @@
             </div>
         </main>
 
-        <!-- foter -->
-        <footer class="footer mt-auto py-3 bg-light">
+        <!-- footer -->
+        <footer class="footer mt-auto py-3">
             <div class="container">
                 <p class="text-center">&copy; 2024 Biblioteca Virtual. Todos los derechos reservados.</p>
             </div>
         </footer>
     </div>
-
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script src="app.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
