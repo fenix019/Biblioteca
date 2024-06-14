@@ -3,17 +3,31 @@ html, body {
     margin: 0;
     padding: 0;
 }
+
 .book-card {
     border: 1px solid #ddd;
     border-radius: 5px;
-    padding: 15px;
     margin: 10px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
-.book-card img {
+
+.card-img-wrapper {
+    height: 200px; /* esta wea fija la altura para las imágenes */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    padding: 10px; /*  padding para despegar las imágenes de los bordes */
+}
+
+.card-img-wrapper img {
+    max-height: 100%;
     max-width: 100%;
-    height: auto;
-    border-radius: 5px;
+    object-fit: cover; 
 }
+
 .footer {
     border-top: 1px solid #ddd;
 }
