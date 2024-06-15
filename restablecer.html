@@ -24,28 +24,24 @@
             </div>
         </header>
 
-        <!-- form container -->
+        <!-- form -->
         <section class="container my-5">
-            <div class="row justify-content-center">
-                <div class="col-md-6">
-                    <form id="recoverForm" class="needs-validation" novalidate>
-                        <div class="form-group">
-                            <label for="inputEmail">Correo Electrónico</label>
-                            <input type="email" class="form-control" id="inputEmail" name="email" required pattern="^[a-zA-Z0-9._%+-]+@(gmail|outlook|hotmail)\.com$" minlength="4">
-                            <div class="invalid-feedback"></div>
-                        </div>
-                        <div class="form-group">
-                            <label for="inputPassword">Nueva Contraseña</label>
-                            <input type="password" class="form-control" id="inputPassword" name="password" required minlength="8" maxlength="15" pattern="^\S+$">
-                            <div class="invalid-feedback"></div>
-                        </div>
-                        <div class="form-group mt-4">
-                            <button type="submit" class="btn btn-primary">Aceptar</button>
-                            <a href="iniciosecion.html" class="btn btn-secondary ml-2">Cancelar</a>
-                        </div>
-                    </form>
+            <form id="recoverForm" novalidate>
+                <div class="form-group">
+                    <label for="inputEmail">Correo Electrónico</label>
+                    <input type="email" class="form-control" id="inputEmail" name="email" required pattern="^[a-zA-Z0-9._%+-]+@(gmail|outlook|hotmail)\.com$" minlength="4">
+                    <div class="invalid-feedback"></div>
                 </div>
-            </div>
+                <div class="form-group">
+                    <label for="inputPassword">Nueva Contraseña</label>
+                    <input type="password" class="form-control" id="inputPassword" name="password" required minlength="8" maxlength="15" pattern="^\S+$">
+                    <div class="invalid-feedback"></div>
+                </div>
+                <div class="form-group mt-4">
+                    <button type="submit" class="btn btn-primary">Aceptar</button>
+                    <a href="iniciosecion.html" class="btn btn-secondary ml-2">Cancelar</a>
+                </div>
+            </form>
         </section>
 
         <!-- footer -->
