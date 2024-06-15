@@ -4,75 +4,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Recuperar Contraseña</title>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
     <link rel="stylesheet" href="/css/recuperar.css">
 </head>
 
 <body>
-    <div class="d-flex flex-column min-vh-100">
-
-        <!-- header -->
-        <header class="header py-3">
-            <div class="container">
-                <div class="row">
-                    <div class="col">
-                        <h1 class="text-center">Biblioteca Virtual</h1>
-                    </div>
+    <div class="container">
+        <h2 class="mt-5 mb-4">Recuperar Contraseña</h2>
+        <form id="passwordRecoveryForm">
+            <div class="form-group">
+                <label for="email">Correo Electrónico:</label>
+                <input type="email" class="form-control" id="email" name="email" required pattern="[a-zA-Z0-9._%+-]+@(gmail|outlook|hotmail)\.(com|es)">
+                <div class="invalid-feedback">
+                    Por favor ingrese un correo válido de Gmail, Outlook o Hotmail.
                 </div>
             </div>
-        </header>
-
-        <!-- nav -->
-        <nav class="navbar navbar-expand-lg navbar-light">
-            <a class="navbar-brand" href="index.html">
-                <img src="logo.png" alt="Logo" style="width: 40px;">
-            </a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="./index.html">Inicio</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="./registro.html">Registro</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="./libros.html">Libros</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="./reglamento.html">Reglamento</a>
-                    </li>
-                </ul>
+            <div class="form-group">
+                <label for="newPassword">Nueva Contraseña:</label>
+                <input type="password" class="form-control" id="newPassword" name="newPassword" required minlength="8" maxlength="15" pattern="^\S+$">
+                <div class="invalid-feedback">
+                    La contraseña debe tener entre 8 y 15 caracteres y no debe contener espacios.
+                </div>
             </div>
-        </nav>
-
-
-
-
-
-
-
-
-
-        <!-- footer -->
-        <footer class="footer mt-auto py-3">
-            <div class="container">
-                <p class="text-center">&copy; 2024 Biblioteca Virtual. Todos los derechos reservados.</p>
-            </div>
-        </footer>
+            <button type="submit" class="btn btn-primary">Aceptar</button>
+            <a href="iniciosecion.html" class="btn btn-secondary">Cancelar</a>
+        </form>
     </div>
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-
-
+    <script src="./script/recuperar.js"></script>
 </body>
 
 </html>
