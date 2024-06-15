@@ -15,6 +15,10 @@ document.addEventListener('DOMContentLoaded', function() {
     emailInput.addEventListener('input', function(event) {
         if (emailInput.validity.patternMismatch) {
             emailInput.setCustomValidity('Ingrese un correo válido de Gmail, Outlook o Hotmail');
+        } else if (emailInput.validity.valueMissing) {
+            emailInput.setCustomValidity('Este campo es requerido');
+        } else if (emailInput.value.indexOf('@') < 4) {
+            emailInput.setCustomValidity('El correo debe contener al menos 4 caracteres antes del @');
         } else {
             emailInput.setCustomValidity('');
         }
@@ -22,11 +26,11 @@ document.addEventListener('DOMContentLoaded', function() {
         if (emailInput.checkValidity()) {
             emailInput.classList.remove('is-invalid');
             emailInput.classList.add('is-valid');
-            emailInput.nextElementSibling.textContent = ''; // Limpiar mensaje de error
+            emailInput.nextElementSibling.textContent = '';
         } else {
             emailInput.classList.remove('is-valid');
             emailInput.classList.add('is-invalid');
-            emailInput.nextElementSibling.textContent = 'Por favor ingrese un correo válido (Gmail, Outlook o Hotmail).';
+            emailInput.nextElementSibling.textContent = emailInput.validationMessage;
         }
     });
 
@@ -40,7 +44,7 @@ document.addEventListener('DOMContentLoaded', function() {
         if (passwordInput.checkValidity()) {
             passwordInput.classList.remove('is-invalid');
             passwordInput.classList.add('is-valid');
-            passwordInput.nextElementSibling.textContent = ''; // Limpiar mensaje de error
+            passwordInput.nextElementSibling.textContent = '';
         } else {
             passwordInput.classList.remove('is-valid');
             passwordInput.classList.add('is-invalid');
