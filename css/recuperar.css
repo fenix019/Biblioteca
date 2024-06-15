@@ -76,33 +76,8 @@ a {
     color: #0056b3;
 }
 
-#contenedor-cita {
-    margin-top: 20px;
-    padding: 20px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    background: url("/img/—Pngtree—manuscripts style vintage paper_1405401.png") no-repeat center / cover;
-    background-color: #f5f5f5;
-}
-
-#cita {
-    font-size: 1.5em;
-    font-weight: bold;
-    color: #333;
-}
-
-#autor {
-    margin-top: 10px;
-    font-size: 1.2em;
-    color: #777;
-}
-
-.tipografia {
-    font-style: italic;
-}
-
 .form-container {
-    background-color: rgba(255, 255, 255, 0.9); /* Fondo blanco semi-transparente */
+    background-color: #ffffff;
     padding: 20px;
     border-radius: 10px;
 }

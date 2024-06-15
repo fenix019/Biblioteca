@@ -24,27 +24,63 @@
             </div>
         </header>
 
-        <!-- form -->
-        <div class="container my-5">
-            <div class="form-container">
-                <form id="recoverForm" novalidate>
-                    <div class="form-group">
-                        <label for="inputEmail">Correo Electrónico</label>
-                        <input type="email" class="form-control" id="inputEmail" name="email" required pattern="^[a-zA-Z0-9._%+-]+@(gmail|outlook|hotmail)\.com$" minlength="4">
-                        <div class="invalid-feedback"></div>
-                    </div>
-                    <div class="form-group">
-                        <label for="inputPassword">Nueva Contraseña</label>
-                        <input type="password" class="form-control" id="inputPassword" name="password" required minlength="8" maxlength="15" pattern="^\S+$">
-                        <div class="invalid-feedback"></div>
-                    </div>
-                    <div class="form-group mt-4">
-                        <button type="submit" class="btn btn-primary">Aceptar</button>
-                        <a href="iniciosecion.html" class="btn btn-secondary ml-2">Cancelar</a>
-                    </div>
-                </form>
+        <!-- nav -->
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <a class="navbar-brand" href="index.html">
+                <img src="logo.png" alt="Logo" style="width: 40px;">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="./index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./registro.html">Registro</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./libros.html">Libros</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./reglamento.html">Reglamento</a>
+                    </li>
+                </ul>
             </div>
-        </div>
+        </nav>
+
+        <!-- form -->
+        <main class="container mt-5 flex-fill">
+            <div class="row justify-content-center">
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h3 class="card-title text-center main-text">Recuperar Contraseña</h3>
+                            <form id="recoverForm" novalidate>
+                                <div class="form-group">
+                                    <label for="inputEmail">Correo Electrónico</label>
+                                    <input type="email" class="form-control" id="inputEmail" name="email" required
+                                        pattern="^[a-zA-Z0-9._%+-]+@(gmail|outlook|hotmail)\.com$" minlength="4">
+                                    <div class="invalid-feedback"></div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="inputPassword">Nueva Contraseña</label>
+                                    <input type="password" class="form-control" id="inputPassword" name="password"
+                                        required minlength="8" maxlength="15" pattern="^\S+$">
+                                    <div class="invalid-feedback"></div>
+                                </div>
+                                <div class="form-group mt-4">
+                                    <button type="submit" class="btn btn-primary">Aceptar</button>
+                                    <a href="iniciosecion.html" class="btn btn-secondary ml-2">Cancelar</a>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
 
         <!-- footer -->
         <footer class="footer mt-auto py-3">
