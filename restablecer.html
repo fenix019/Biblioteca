@@ -25,24 +25,35 @@
         </header>
 
         <!-- form -->
-        <div class="container my-5">
-            <form id="recoverForm" novalidate>
-                <div class="form-group">
-                    <label for="inputEmail">Correo Electrónico</label>
-                    <input type="email" class="form-control" id="inputEmail" name="email" required pattern="^[a-zA-Z0-9._%+-]+@(gmail|outlook|hotmail)\.com$" minlength="4">
-                    <div class="invalid-feedback"></div>
+
+        <main class="container mt-5 flex-fill">
+            <div class="row justify-content-center">
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h3 class="card-title text-center main-text">Inicio de Sesión</h3>
+                            <form id="recoverForm" novalidate>
+                                <div class="form-group">
+                                    <label for="inputEmail">Correo Electrónico</label>
+                                    <input type="email" class="form-control" id="inputEmail" name="email" required pattern="^[a-zA-Z0-9._%+-]+@(gmail|outlook|hotmail)\.com$" minlength="4">
+                                    <div class="invalid-feedback"></div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="inputPassword">Nueva Contraseña</label>
+                                    <input type="password" class="form-control" id="inputPassword" name="password" required minlength="8" maxlength="15" pattern="^\S+$">
+                                    <div class="invalid-feedback"></div>
+                                </div>
+                                <div class="form-group mt-4">
+                                    <button type="submit" class="btn btn-primary">Aceptar</button>
+                                    <a href="iniciosecion.html" class="btn btn-secondary ml-2">Cancelar</a>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
                 </div>
-                <div class="form-group">
-                    <label for="inputPassword">Nueva Contraseña</label>
-                    <input type="password" class="form-control" id="inputPassword" name="password" required minlength="8" maxlength="15" pattern="^\S+$">
-                    <div class="invalid-feedback"></div>
-                </div>
-                <div class="form-group mt-4">
-                    <button type="submit" class="btn btn-primary">Aceptar</button>
-                    <a href="iniciosecion.html" class="btn btn-secondary ml-2">Cancelar</a>
-                </div>
-            </form>
-        </div>
+            </div>
+        </main>
+
 
         <!-- footer -->
         <footer class="footer mt-auto py-3">
@@ -55,7 +66,7 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script src="recuperar.js"></script>
+    <script src="./script/recuperar.js"></script>
 </body>
 
 </html>
