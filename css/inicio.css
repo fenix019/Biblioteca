@@ -96,3 +96,10 @@ a {
 .tipografia {
     font-style: italic; /* Aplica estilo cursiva */
 }
+.form-control:valid {
+    border-color: #28a745;
+}
+
+.form-control:invalid {
+    border-color: #dc3545;
+}
