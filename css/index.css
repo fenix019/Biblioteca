@@ -101,7 +101,7 @@ a {
 #cita {
     font-size: 1.5em;
     font-weight: bold;
-    color: #333;
+    color: #1c1c1c;
 }
 
 #autor {
@@ -111,5 +111,5 @@ a {
 }
 
 .tipografia {
-    font-style: italic; /* Aplica estilo cursiva */
+    font-style: Edwardian Script ITC; /* Aplica estilo cursiva */
 }
