@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', function() {
             emailInput.setCustomValidity('Ingrese un correo válido de Gmail, Outlook o Hotmail');
         } else if (emailInput.validity.valueMissing) {
             emailInput.setCustomValidity('Este campo es obligatorio');
-        } else if (emailInput.value.indexOf('@') < 4) {
+        } else if (emailInput.value.indexOf('@') < 1 || emailInput.value.indexOf('@') > 50) {
             emailInput.setCustomValidity('Debe contener al menos 4 caracteres antes del "@"');
         } else {
             emailInput.setCustomValidity('');
