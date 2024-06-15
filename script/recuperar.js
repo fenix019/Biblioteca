@@ -15,10 +15,6 @@ document.addEventListener('DOMContentLoaded', function() {
     emailInput.addEventListener('input', function(event) {
         if (emailInput.validity.patternMismatch) {
             emailInput.setCustomValidity('Ingrese un correo válido de Gmail, Outlook o Hotmail');
-        } else if (emailInput.validity.valueMissing) {
-            emailInput.setCustomValidity('Este campo es requerido');
-        } else if (emailInput.value.indexOf('@') < 4) {
-            emailInput.setCustomValidity('El correo debe contener al menos 4 caracteres antes del @');
         } else {
             emailInput.setCustomValidity('');
         }
@@ -30,7 +26,7 @@ document.addEventListener('DOMContentLoaded', function() {
         } else {
             emailInput.classList.remove('is-valid');
             emailInput.classList.add('is-invalid');
-            emailInput.nextElementSibling.textContent = emailInput.validationMessage;
+            emailInput.nextElementSibling.textContent = 'Por favor ingrese un correo válido (Gmail, Outlook o Hotmail).';
         }
     });
 
