@@ -2,6 +2,7 @@ html, body {
     height: 100%;
     margin: 0;
     padding: 0;
+    background: url('/img/659155.jpg') no-repeat center / cover;
     background-color: #FFFFFF;
 }
 
@@ -14,7 +15,7 @@ html, body {
 }
 
 .navbar, .header {
-    background-color: #007BFF;
+    background-color: rgba(0, 123, 255, 0.4); /* el .4 o sea lo ultimo, es la opacidad dx */
 }
 
 .navbar-brand img {
@@ -25,6 +26,17 @@ html, body {
 
 .navbar-nav .nav-link {
     color: #FFFFFF;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #e0e0e0;
+}
+
+
+.navbar-nav .nav-link,
+.navbar-nav .nav-link:hover {
+    font-size: larger;
+    color: #ffd700 !important;
 }
 
 .book-card {
@@ -43,7 +55,7 @@ html, body {
 
 .footer {
     border-top: 1px solid #ddd;
-    background-color: #F5F5F5;
+    background-color: rgba(245, 245, 245, 0.4); /* Color con transparencia */
 }
 
 .footer p {
