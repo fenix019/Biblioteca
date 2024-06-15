@@ -101,21 +101,8 @@ a {
     font-style: italic;
 }
 
-.form-control.is-valid {
-    border-color: #28a745;
-}
-
-.form-control.is-invalid {
-    border-color: #dc3545;
-}
-
-.invalid-feedback {
-    color: #dc3545;
-    display: none; /* Ocultamos el mensaje de error por defecto */
-    margin-top: .25rem;
-    font-size: 80%;
-}
-
-.form-control.is-invalid~.invalid-feedback {
-    display: block; /* Mostramos el mensaje de error cuando el campo es inválido */
+.form-container {
+    background-color: rgba(255, 255, 255, 0.9); /* Fondo blanco semi-transparente */
+    padding: 20px;
+    border-radius: 10px;
 }
