@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', function() {
         if (emailInput.checkValidity()) {
             emailInput.classList.remove('is-invalid');
             emailInput.classList.add('is-valid');
-            emailInput.nextElementSibling.textContent = ''; // Limpiar mensaje de error
+            emailInput.nextElementSibling.textContent = '';
         } else {
             emailInput.classList.remove('is-valid');
             emailInput.classList.add('is-invalid');
@@ -40,7 +40,7 @@ document.addEventListener('DOMContentLoaded', function() {
         if (passwordInput.checkValidity()) {
             passwordInput.classList.remove('is-invalid');
             passwordInput.classList.add('is-valid');
-            passwordInput.nextElementSibling.textContent = ''; // Limpiar mensaje de error
+            passwordInput.nextElementSibling.textContent = '';
         } else {
             passwordInput.classList.remove('is-valid');
             passwordInput.classList.add('is-invalid');
