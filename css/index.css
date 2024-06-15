@@ -101,7 +101,7 @@ a {
 #cita {
     font-size: 3em;
     font-weight: bold;
-    color: gold;
+    color: rgba(255, 217, 0, 0.82);
     text-shadow: 
     -1px -1px 0 #000,  
      1px -1px 0 #000,
@@ -112,7 +112,7 @@ a {
 #autor {
     margin-top: 10px;
     font-size: 1.2em;
-    color: #777;
+    color: #1c1c1c;
 }
 
 .tipografia {
