@@ -101,13 +101,13 @@ a {
 #cita {
     font-size: 1.5em;
     font-weight: bold;
-    color: #333;
+    color: #1f1f1f;
 }
 
 #autor {
     margin-top: 10px;
     font-size: 1.2em;
-    color: #9e0606;
+    color: #777;
 }
 
 .tipografia {
