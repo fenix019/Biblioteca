@@ -105,3 +105,11 @@ a {
 .card .card-title {
     color: #FFFFFF; /* Color blanco para el título de la tarjeta */
 }
+.invalid-feedback {
+    display: none;
+    color: red;
+}
+
+.is-invalid {
+    border-color: red;
+}

@@ -6,16 +6,7 @@
     <title>Registro - Biblioteca Virtual</title>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="./css/registro.css">
-    <style>
-        .invalid-feedback {
-            display: none;
-            color: red;
-        }
 
-        .is-invalid {
-            border-color: red;
-        }
-    </style>
 </head>
 <body>
 
@@ -127,64 +118,6 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script>
-        // Función para validar campos en tiempo real
-        function validateInput(inputElement) {
-            var isValid = inputElement.checkValidity();
-            if (!isValid) {
-                inputElement.classList.add('is-invalid');
-                inputElement.nextElementSibling.style.display = 'block';
-            } else {
-                inputElement.classList.remove('is-invalid');
-                inputElement.nextElementSibling.style.display = 'none';
-            }
-        }
-
-        // Eventos para validar campos en tiempo real
-        document.getElementById('username').addEventListener('input', function() {
-            validateInput(this);
-        });
-
-        document.getElementById('name').addEventListener('input', function() {
-            validateInput(this);
-        });
-
-        document.getElementById('lastname').addEventListener('input', function() {
-            validateInput(this);
-        });
-
-        document.getElementById('lastname2').addEventListener('input', function() {
-            validateInput(this);
-        });
-
-        document.getElementById('email').addEventListener('input', function() {
-            validateInput(this);
-        });
-
-        document.getElementById('password').addEventListener('input', function() {
-            validateInput(this);
-        });
-
-        document.getElementById('password2').addEventListener('input', function() {
-            validateInput(this);
-        });
-
-        // Validación al enviar el formulario
-        document.getElementById('registroForm').addEventListener('submit', function(event) {
-            var form = document.getElementById('registroForm');
-            if (!form.checkValidity()) {
-                event.preventDefault();
-                event.stopPropagation();
-            }
-            form.classList.add('was-validated');
-            
-            var password = document.getElementById('password').value;
-            var password2 = document.getElementById('password2').value;
-            if (password !== password2) {
-                alert('Las contraseñas no coinciden');
-                event.preventDefault();
-            }
-        });
-    </script>
+    <script src="./script/registro.js"></script>
 </body>
 </html>
