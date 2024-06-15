@@ -1,28 +1,30 @@
-document.addEventListener('DOMContentLoaded', function () {
-    const form = document.getElementById('passwordRecoveryForm');
+document.addEventListener('DOMContentLoaded', function() {
+    const form = document.getElementById('recoverForm');
+    const emailInput = form.querySelector('#inputEmail');
+    const passwordInput = form.querySelector('#inputPassword');
 
-    form.addEventListener('submit', function (event) {
-        event.preventDefault();
-        if (form.checkValidity()) {
-            alert('Formulario válido, se podría procesar el envío aquí.');
-            // Aquí iría el código para procesar la recuperación de contraseña
-        } else {
+    form.addEventListener('submit', function(event) {
+        if (!form.checkValidity()) {
+            event.preventDefault();
             event.stopPropagation();
         }
+
         form.classList.add('was-validated');
     });
 
-    // Para mostrar errores en tiempo real
-    const inputs = form.querySelectorAll('input');
-    inputs.forEach(input => {
-        input.addEventListener('input', function () {
-            if (input.checkValidity()) {
-                input.classList.remove('is-invalid');
-                input.classList.add('is-valid');
-            } else {
-                input.classList.remove('is-valid');
-                input.classList.add('is-invalid');
-            }
-        });
+    emailInput.addEventListener('input', function(event) {
+        if (emailInput.validity.patternMismatch) {
+            emailInput.setCustomValidity('Ingrese un correo válido de Gmail, Outlook o Hotmail');
+        } else {
+            emailInput.setCustomValidity('');
+        }
+    });
+
+    passwordInput.addEventListener('input', function(event) {
+        if (passwordInput.validity.patternMismatch) {
+            passwordInput.setCustomValidity('La contraseña no debe contener espacios');
+        } else {
+            passwordInput.setCustomValidity('');
+        }
     });
 });
