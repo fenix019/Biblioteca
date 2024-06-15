@@ -11,29 +11,28 @@ function enviarCorreo() {
     Email.send({
         Host: "smtp-mail.outlook.com",
         Username: "delacruzhernandezoscardavid@outlook.com",
-        Password: "D@vidpro1987", /*cfcff*/ 
+        Password: "D@vidpro1987",
         To: destinatario,
         From: remitente,
         Subject: "Mensaje de nuevo usuario",
-        Body: "Hola " + nombre + ",\n\nTu registro a sido validado."
+        Body: "Hola " + nombre + ",\n\nTu registro ha sido validado."
     }).then(
         mensaje => {
-            alert("Correo enviado exitosamente: " + mensaje);
-            Email.send({
+            alert("Correo enviado exitosamente a " + destinatario + ": " + mensaje);
+            // Envío de correo de confirmación
+            return Email.send({
                 Host: "smtp-mail.outlook.com",
                 Username: "delacruzhernandezoscardavid@outlook.com",
-                Password: "D@vidpro1987", /*cfcff*/ 
+                Password: "D@vidpro1987",
                 To: remitente,
                 From: "delacruzhernandezoscardavid@outlook.com",
                 Subject: "Confirmación de recepción de datos",
                 Body: "El destinatario ha recibido los datos exitosamente.\n\nGracias por registrarte con nosotros."
-            }).then(
-                confirmacion => alert("Correo de confirmación enviado exitosamente: " + confirmacion)
-            ).catch(
-                error => alert("Error al enviar el correo de confirmación: " + error)
-            );
+            });
         }
+    ).then(
+        confirmacion => alert("Correo de confirmación enviado exitosamente: " + confirmacion)
     ).catch(
-        error => alert("Error al enviar el correo al destinatario: " + error)
+        error => alert("Error al enviar el correo: " + error)
     );
 }
