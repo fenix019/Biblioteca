@@ -20,11 +20,13 @@ document.addEventListener('DOMContentLoaded', function() {
         }
 
         if (emailInput.checkValidity()) {
-            emailInput.classList.add('is-valid');
             emailInput.classList.remove('is-invalid');
+            emailInput.classList.add('is-valid');
+            emailInput.nextElementSibling.textContent = ''; // Limpiar mensaje de error
         } else {
-            emailInput.classList.add('is-invalid');
             emailInput.classList.remove('is-valid');
+            emailInput.classList.add('is-invalid');
+            emailInput.nextElementSibling.textContent = 'Por favor ingrese un correo válido (Gmail, Outlook o Hotmail).';
         }
     });
 
@@ -36,11 +38,13 @@ document.addEventListener('DOMContentLoaded', function() {
         }
 
         if (passwordInput.checkValidity()) {
-            passwordInput.classList.add('is-valid');
             passwordInput.classList.remove('is-invalid');
+            passwordInput.classList.add('is-valid');
+            passwordInput.nextElementSibling.textContent = ''; // Limpiar mensaje de error
         } else {
-            passwordInput.classList.add('is-invalid');
             passwordInput.classList.remove('is-valid');
+            passwordInput.classList.add('is-invalid');
+            passwordInput.nextElementSibling.textContent = 'La contraseña debe tener entre 8 y 15 caracteres y no debe contener espacios.';
         }
     });
 });
