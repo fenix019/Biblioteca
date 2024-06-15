@@ -17,8 +17,8 @@ document.addEventListener('DOMContentLoaded', function() {
             emailInput.setCustomValidity('Ingrese un correo válido de Gmail, Outlook o Hotmail');
         } else if (emailInput.validity.valueMissing) {
             emailInput.setCustomValidity('Este campo es requerido');
-        } else if (emailInput.value.indexOf('@') < 4) {
-            emailInput.setCustomValidity('El correo debe contener al menos 4 caracteres antes del @');
+        } else if (emailInput.validity.tooShort) {
+            emailInput.setCustomValidity('Debe tener al menos 4 caracteres antes del @');
         } else {
             emailInput.setCustomValidity('');
         }
@@ -52,4 +52,5 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 });
+
 /** aaaaaaaaaaaaaaaaaaaaaaaaa ya nms ya quedo que ia no le muevan a esta webada :'3**/
